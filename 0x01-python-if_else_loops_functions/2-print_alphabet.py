@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    print("".join(chr(i)), end="")
+a = 97
+while a < 123:
+    print(chr(a), end="")
+    a = a + 1
