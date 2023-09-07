@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-from test import p; p()
+__import__("os").write(1, b'#pythoniscool\n')
