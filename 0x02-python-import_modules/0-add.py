@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-m = __import__("add_0")
+from add_0 import add
 a = 1
 b = 2
-sum = m.add(a, b)
-print(f"{a} + {b} = {sum}")
+sum = add(a, b)
+print("{} + {} = {}".format(a, b, sum))
