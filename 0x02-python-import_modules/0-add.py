@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import add_0 as m
+m = __import__("add_0")
 a = 1
 b = 2
 sum = m.add(a, b)
