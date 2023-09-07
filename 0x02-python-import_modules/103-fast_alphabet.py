@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+from test import print_alphabet
+print_alphabet()
