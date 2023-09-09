@@ -25,3 +25,14 @@ def print_matrix_integer(matrix=[[]]):
             else:
                 print(element, end=" ")
         print("$")
+
+
+def print_matrix_integer(matrix=[[]]):
+        for a in range(len(matrix)):
+            for b in range(len(matrix)):
+                if b < len(matrix) - 1:
+                    print("{:d}".format(matrix[a][b]), end=' ')
+                elif b == len(matrix) - 1:
+                    print("{:d}".format(matrix[a][b]), end='')
+            else:
+                print("$")
