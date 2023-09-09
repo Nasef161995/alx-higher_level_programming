@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-a = [1, 2, 3, 4, 5]
-b = a.copy()
-
-print(b)
+a = "mohamed"
+a[0]= 'h'
+print(a)
