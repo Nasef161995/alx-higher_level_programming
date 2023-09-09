@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix == 0:
-        print("$")
-    else:
         for a in range(len(matrix)):
             for b in range(len(matrix)):
                 if b < len(matrix) - 1:
