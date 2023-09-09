@@ -4,8 +4,10 @@ matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ]
-print(len(matrix))
-for i in range(3):
-    for j in range(3):
-        print(matrix[i][j], end=" ")
-    print()
+for row in matrix:
+    for element in row:
+        if element == row[-1]:
+            print(element, end='')
+        else:
+            print(element, end=" ")
+    print("$")
