@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
     new = my_list.copy()
-    new[new.index(search)] = replace
+    n = new.index(search)
+    new.pop(n)
+    new.insert(n, replace)
     return new

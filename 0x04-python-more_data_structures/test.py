@@ -26,3 +26,7 @@ for row in matrix:
 new = [[i**2 for i in x] for x in matrix]
 print(new)
 print(matrix)
+print('=======================')
+my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
+my_list[0] = []
+print(my_list)
