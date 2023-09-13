@@ -1,12 +1,5 @@
 #!/usr/bin/python3
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-new = [[pow(element, 2) for element in row] for row in matrix]
-
-print(new)
-print(matrix)
+my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
+n = my_list.index(5)
+my_list[n] = 100000000
+print(my_list)
