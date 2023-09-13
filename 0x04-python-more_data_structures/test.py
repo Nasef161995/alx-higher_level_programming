@@ -1,4 +1,28 @@
 #!/usr/bin/python3
-a = 10.446
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+new = [i for i in matrix]
+print(matrix)
+print(new)
 
-print(f"{a:.2f}")
+for i in range(3):
+    for j in range(3):
+        new[i][j] = new[i][j]**2
+
+print(new)
+print(matrix)
+print('=======================')
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+for row in matrix:
+    for element in row:
+        print(element)
+new = [[i**2 for i in x] for x in matrix]
+print(new)
+print(matrix)
