@@ -1,12 +1,17 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    new = my_list.copy()
-    new[new.index(search)] = replace
-    return new
-
-
-my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
-new_list = search_replace(my_list, 2, 89)
-
-print(new_list)
-print(my_list)    
+def uniq_add(my_list=[]):
+    result = 0
+    for num in my_list:
+        if my_list.count(num) == 1: 
+            result = result + num
+        else:
+            i = 0
+            
+            if i == 0:
+                temp = num
+            if i > 0:
+                while i != my_list.count(num):
+                    my_list[my_list.index(num)] = 0
+                    i+=1
+            result = result + temp
+    return result

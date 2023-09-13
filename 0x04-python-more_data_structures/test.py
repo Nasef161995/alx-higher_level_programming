@@ -27,6 +27,15 @@ new = [[i**2 for i in x] for x in matrix]
 print(new)
 print(matrix)
 print('=======================')
-my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
-
-print(my_list.count(2))
+my_list = [1, 2, 3, 1, 4, 2, 5]
+result = 0
+for num in my_list:
+    trial = my_list.count(num)
+    if trial > 1:
+        i = 0
+        result = result + num
+        while i != trial:
+                my_list[my_list.index(num)] = 0
+                i+=1
+print(my_list)
+print(result)
