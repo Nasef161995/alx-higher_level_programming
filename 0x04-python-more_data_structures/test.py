@@ -18,7 +18,9 @@ result = uniq_add(my_list)
 print("Result: {:d}".format(result))
 
 
+# ----------------------------------------
 
+# first
 
 def uniq_add(my_list=[]):
     result = 0
