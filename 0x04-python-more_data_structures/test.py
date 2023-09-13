@@ -28,5 +28,5 @@ print(new)
 print(matrix)
 print('=======================')
 my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
-my_list[0] = []
-print(my_list)
+
+print(my_list.count(2))
