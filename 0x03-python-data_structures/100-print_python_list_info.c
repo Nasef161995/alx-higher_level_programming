@@ -4,6 +4,10 @@
  * print_python_list_info - function prints some basic info about Python lists.
  * @p: pointer PyObject
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 void print_python_list_info(PyObject *p)
 {
     long int size;
