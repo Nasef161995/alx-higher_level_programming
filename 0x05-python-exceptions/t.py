@@ -1,13 +1,23 @@
 #!/usr/bin/python3
-a = [10, 12, 20]
-b = [1, 2, 10]
-c = [ ]
+def safe_print_list(my_list=[], x=0):
+    i = 0
+    for num in range(0, x):
+        try:
+                print(my_list[num], end='')
+                i += 1
+        except:
+            x=x
+            
 
-c.append (a[0] / b[0])
+    print()
+    return i
 
-print(a[0])
-print(b[0])
 
-   
+my_list = [1, 2, 3, 4, 5]
 
-print(c)
+nb_print = safe_print_list(my_list, 2)
+print("nb_print: {:d}".format(nb_print))
+nb_print = safe_print_list(my_list, len(my_list))
+print("nb_print: {:d}".format(nb_print))
+nb_print = safe_print_list(my_list, len(my_list) + 2)
+print("nb_print: {:d}".format(nb_print))
