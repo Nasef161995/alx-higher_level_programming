@@ -1,18 +1,55 @@
 #!/usr/bin/python3
-class Book:
-    def __init__(self, name):
-        self.__name = name
-    @property    
-    def name(self):
-        print(" in getter")
-        return self.__name
-    @name.setter
-    def name(self, new):
-        print("in setter")
-        self.__name= new   
+""" Square class """
 
 
-m1 = Book("aaaaa")
-print(m1.name)
-m2 = Book("hhhhhhhhh")
-print(m2.name)
+class Square:
+    """Square"""
+
+    def __init__(self, size=0, position=(0, 0)):
+        self.__size = size
+        self.__position = position
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise Exception('size must be an integer')
+        if value < 0:
+            raise Exception('size must be >= 0')
+        self.__size = value
+
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if not isinstance(value, tuple) and len(value) == 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if not all(isinstance(num, int) and num >= 0 for num in value):
+            raise TypeError('position must be a tuple of 2 positive integers')
+            
+        self.__position = value
+
+    def area(self):
+        return self.__size * self.__size
+
+    def my_print(self):
+        
+        if self.__size:
+            s = ''
+            for x in range(0, self.__position[0]):
+                s += ' '
+
+            for i in range(0, self.__size):
+                for j in range(0, self.__size):
+                    if j == 0:
+                        print(f"{s}#", end='')
+                    else:
+                        print("#", end='')
+                print()
+        else:
+            print()
