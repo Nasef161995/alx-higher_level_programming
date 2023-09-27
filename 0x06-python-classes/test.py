@@ -2,9 +2,17 @@
 class Book:
     def __init__(self, name):
         self.__name = name
-    def get_name():
+    @property    
+    def name(self):
+        print(" in getter")
         return self.__name
+    @name.setter
     def name(self, new):
-       self.get_name= new   
+        print("in setter")
+        self.__name= new   
+
+
 m1 = Book("aaaaa")
 print(m1.name)
+m2 = Book("hhhhhhhhh")
+print(m2.name)
