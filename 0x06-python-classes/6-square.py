@@ -27,19 +27,22 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(position, tuple):
-            raise Exception('position must be a tuple of 2 positive integers')
-        elif not isinstance(position[0] and position[1], int):
-            raise Exception('position must be a tuple of 2 positive integers')
-        elif position[0] <0 and position[1] <0:
-            raise Exception('position must be a tuple of 2 positive integers')
-
+        
         self.__position = value
 
     def area(self):
         return self.__size * self.__size
 
     def my_print(self):
+
+        if not isinstance(self.__position, tuple):
+            raise Exception('position must be a tuple of 2 positive integers')
+        elif not isinstance(self.__position[0] and self.__position[1], int):
+            raise Exception('position must be a tuple of 2 positive integers')
+        elif self.__position[0] <0 and self.__position[1] <0:
+            raise Exception('position must be a tuple of 2 positive integers')
+
+
         if self.__size:
             s = ''
             for x in range(0, self.__position[0]):
