@@ -37,3 +37,6 @@ class Rectangle:
             return 0
         else:
             return ( self._Rectangle__height + self._Rectangle__width) * 2
+
+    def __str__(self):
+        return f"{['#'* self._Rectangle__width for i in range(0, self._Rectangle__height)]}"
