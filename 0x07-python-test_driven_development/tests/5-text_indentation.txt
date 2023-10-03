@@ -19,6 +19,14 @@ How are you:
 <BLANKLINE>
 mohamed
 
+>>> text = " engineer :  nasef  ."
+>>> text_indentation(text)
+engineer :
+<BLANKLINE>
+nasef  .
+<BLANKLINE>
+
+
 >>> text = 10
 >>> text_indentation(text)
 Traceback (most recent call last):
