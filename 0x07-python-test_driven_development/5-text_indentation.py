@@ -9,9 +9,13 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
             raise TypeError("text must be a string")
+    new = ""
     for i in text:
         if (i == '.' or i == '?' or i == ':') :
-            print(i)
-            print()
+            new += i
+            new += '\n'*2
         else:
-            print(i.strip(), end='')
+            new += i
+    mylist = new.splitlines()
+    for word in mylist:
+        print(word.strip())

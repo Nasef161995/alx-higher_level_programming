@@ -3,13 +3,13 @@
 >>> text_indentation(text)
 Holberton School
 
->>> text = "mohamed.nasef"
+>>> text = "          mohamed.           nasef"
 >>> text_indentation(text)
 mohamed.
 <BLANKLINE>
 nasef
 
->>> text = "Holberton. School? How are you: mohamed"
+>>> text = "Holberton.      School?      How are you:    mohamed"
 >>> text_indentation(text)
 Holberton.
 <BLANKLINE>
