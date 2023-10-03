@@ -3,6 +3,7 @@ def magic_string():
     s = 'BestSchool'
     n = ''
     for i in range(0, 10):
-        n+= s + ', '
+
+        n += s + ', '
 
     return n
