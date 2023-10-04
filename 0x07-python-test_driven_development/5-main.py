@@ -3,5 +3,3 @@ text_indentation = __import__('5-text_indentation').text_indentation
 
 text = "Holberton.School"
 text_indentation(text)
-
-
