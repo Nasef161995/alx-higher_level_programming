@@ -2,20 +2,26 @@
 """text_indentation
 """
 
+
 def text_indentation(text):
     """text_indentation
     arg:
         text: text
     """
     if not isinstance(text, str):
-            raise TypeError("text must be a string")
+        raise TypeError("text must be a string")
     new = ""
     for i in text:
-        if (i == '.' or i == '?' or i == ':') :
+        if (i == '.' or i == '?' or i == ':'):
             new += i
-            new += '\n'*2
+            new += '\n' * 2
         else:
             new += i
     mylist = new.splitlines()
     for word in mylist:
-        print(word.strip())
+        if word == mylist[-1]:
+        
+                print(word.strip(), end= '')
+        else:
+            print(word.strip())
+        
