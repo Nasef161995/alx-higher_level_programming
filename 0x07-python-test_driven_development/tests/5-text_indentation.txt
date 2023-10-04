@@ -19,9 +19,6 @@ How are you:
 <BLANKLINE>
 mohamed
 
-
-
-
 >>> text = "       nasef       "
 >>> text_indentation(text)
 nasef

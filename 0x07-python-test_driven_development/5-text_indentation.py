@@ -18,11 +18,10 @@ def text_indentation(text):
         else:
             new += i
     mylist = new.splitlines()
-   
+
     for word in mylist:
         if word == mylist[-1]:
-        
-                print(word.strip(), end= "")
+
+            print(word.strip(), end="")
         else:
             print(word.strip())
-        
