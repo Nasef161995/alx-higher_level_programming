@@ -66,3 +66,19 @@ Traceback (most recent call last):
 ...
     raise TypeError("div must be a number")
 TypeError: div must be a number
+
+
+>>> matrix = [1, 2, 3]
+>>> matrix_divided(matrix, 3)  
+Traceback (most recent call last):
+...
+    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+>>> matrix_divided(3)  
+Traceback (most recent call last):
+...
+    print(matrix_divided(3))
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
