@@ -7,6 +7,10 @@
 >>> matrix_divided(matrix, 3)  
 [[1.0]]
 
+>>> matrix = []
+>>> matrix_divided(matrix, 3)  
+[]
+
 >>> matrix = [[6, 9], [18, 15]]
 >>> matrix_divided(matrix, -3)  
 [[-2.0, -3.0], [-6.0, -5.0]]
