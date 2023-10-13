@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-"""Read file."""
+"""read_file"""
 
 
 def read_file(filename=""):
-    """Read file."""
-# Open the text file using "with" statement to ensure it is closed after use.
-    with open(filename, mode='r', encoding='utf-8') as f:
-        for line in f:
-            print(line, end="")
+    """read_file"""
+    file = open(filename, "r", encoding="utf-8")
+    print(file.read())
