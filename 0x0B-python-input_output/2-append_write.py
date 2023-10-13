@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""Python script."""
+"""append_write"""
 
 
 def append_write(filename="", text=""):
-    """Append write."""
-    with open(filename, mode='a', encoding='utf-8') as f:
-        return (f.write(text))
+    """append_write"""
+    with open(filename, "a", encoding="utf-8") as file:
+        file.write(text)
+
+    return len(text)
