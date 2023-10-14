@@ -4,4 +4,7 @@
 
 def is_same_class(obj, a_class):
     """is_same_class"""
-    return issubclass(obj, a_class)
+    if type(obj) == a_class:
+        return True
+    else:
+        return False
