@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Base"""
+"""models/base.py"""
 import json
 import os
 
 
 class Base:
-    """Base"""
+    """class Base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
