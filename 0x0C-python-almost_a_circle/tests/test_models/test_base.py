@@ -1,54 +1,36 @@
+#!/usr/bin/python3
+"""Unittest for base class
+"""
 import unittest
-import sys
-from io import StringIO
 from models.base import Base
 from models.rectangle import Rectangle
+from ast import literal_eval
 
 
-class TestBase(unittest.TestCase):
-    """ Base Class """
+class TestBaseClass(unittest.TestCase):
+    """
+        test Base class
+    """
 
-    def test_id(self):
-        """ id """
+    def test_id_increasing(self):
+        """
+        test Base calss without arguments
+        """
+        base_2 = Base()
+        self.assertEqual(base_2.id, 1)
+        base_1 = Base(25)
+        self.assertEqual(base_1.id, 25)
+        base_3 = Base()
+        self.assertEqual(base_3.id, 2)
 
-        b1 = Base()
-        self.assertEqual(b1.id, 1)
+    def test_to_json_string(self):
+        """test to json string"""
+        rectangle = Rectangle(10, 7, 2, 8)
 
-        b2 = Base()
-        self.assertEqual(b2.id, 2)
+        dictionary = rectangle.to_dictionary()
 
-        b3 = Base(12)
-        self.assertEqual(b3.id, 12)
-
-        b4 = Base()
-        self.assertEqual(b4.id, 3)
-
-    def test_id_string(self):
-        """string"""
-
-        b1 = Base("string")
-        self.assertEqual(b1.id, "string")
-
-    def test_id_None(self):
-        """None"""
-
-        b1 = Base(None)
-        self.assertEqual(b1.id, 4)
-
-    def test_id_float(self):
-        """float"""
-
-        b1 = Base(1.2)
-        self.assertEqual(b1.id, 1.2)
-
-    def test_id_NaN(self):
-        """float nan"""
-
-        b1 = Base(float("nan"))
-        self.assertEqual(b1.id is float("nan"), False)
-
-    def test_id_inf(self):
-        """float inf"""
-
-        b1 = Base(float("inf"))
-        self.assertEqual(b1.id is float("inf"), False)
+        # get json string
+        json_dictionary_string = Base.to_json_string([dictionary])
+        # convet it to Dict
+        json_dictionary = literal_eval(json_dictionary_string[1: -1])
+        self.assertDictEqual(dictionary, json_dictionary)
