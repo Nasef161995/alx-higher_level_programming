@@ -11,17 +11,21 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """class Square"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """class Square"""
         self.width = value
         self.height = value
 
     def __str__(self):
+        """class Square"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     def update(self, *args, **kwargs):
+        """class Square"""
         if args:
             attr_names = ['id', 'size', 'x', 'y']
             for i, j in zip(attr_names, args):
@@ -31,6 +35,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """class Square"""
         d = {
             "id": self.id,
             "x": self.x,
