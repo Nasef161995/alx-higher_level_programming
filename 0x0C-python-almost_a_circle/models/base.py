@@ -36,11 +36,11 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        list = json.loads(json_string)
+
         if json_string is None or json_string == "":
             return []
         else:
-            return list
+            return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
