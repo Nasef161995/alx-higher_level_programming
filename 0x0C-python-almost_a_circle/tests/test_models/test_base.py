@@ -8,11 +8,11 @@ class TestBase(unittest.TestCase):
     """TestBase class"""
 
     def tets(self):
-        m1 = Base()
-        self.assertEqual(m1.id, 1)
+        a = Base()
+        self.assertEqual(a.id, 1)
 
-        m2 = Base()
-        self.assertEqual(m2.id, 2)
+        a1 = Base()
+        self.assertEqual(a1.id, 2)
 
-        m3 = Base(10)
-        self.assertEqual(m2.id, 10)
+        a2 = Base(12)
+        self.assertEqual(a2.id, 12)
