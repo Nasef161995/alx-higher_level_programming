@@ -16,10 +16,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """class Rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """class Rectangle"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -28,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """class Rectangle"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """class Rectangle"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -40,10 +44,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """class Rectangle"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """class Rectangle"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -52,10 +58,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """class Rectangle"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """class Rectangle"""
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -63,9 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """class Rectangle"""
         return self.__height * self.__width
 
     def display(self):
+        """class Rectangle"""
         for y in range(0, self.__y):
             print()
         for i in range(0, self.__height):
@@ -76,9 +86,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        """class Rectangle"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
+            f"{self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
+        """class Rectangle"""
         if args:
             attr_names = ['id', 'width', 'height', 'x', 'y']
             for i, j in zip(attr_names, args):
@@ -88,6 +101,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """class Rectangle"""
         d = {
             "x": self.x,
             "y": self.y,
