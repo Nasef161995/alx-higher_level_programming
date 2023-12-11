@@ -1,2 +1,3 @@
 #!/usr/bin/node
-console.log(process.argv[2]);
+const { argv } = require('node:process');
+console.log(argv);
