@@ -1,6 +1,6 @@
 #!/usr/bin/node
-if (!process.argv[2]) {
-    console.log('No argument');
+if (Number.parseInt(process.argv[2])) {
+    console.log(Number.parseInt(process.argv[2]));
 }
 else
-    console.log(process.argv[2]);
+    console.log('Not a number');
