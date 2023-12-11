@@ -1,6 +1,4 @@
 #!/usr/bin/node
-const myArray = ['apple', 'banana', 'orange'];
-
-for (const element of myArray) {
-  console.log(element);
-}
+const myArray = [9, 8, 7, 6, 5];
+myArray.sort();
+console.log(myArray);
