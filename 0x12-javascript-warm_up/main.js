@@ -1,6 +1,6 @@
 #!/usr/bin/node
-if (Number.parseInt(process.argv[2])) {
-    console.log(Number.parseInt(process.argv[2]));
+const myArray = ['apple', 'banana', 'orange'];
+
+for (const element of myArray) {
+  console.log(element);
 }
-else
-    console.log('Not a number');
