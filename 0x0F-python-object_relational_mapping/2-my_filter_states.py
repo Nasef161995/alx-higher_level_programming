@@ -12,8 +12,8 @@ if __name__ == "__main__":
         port=3306
     )
     cursor = db_connection.cursor()
-    quary = "SELECT * FROM states WHERE name = %s ORDER BY ID ASC"
-    cursor.execute(quary, (argv[4],))
+    quary = "SELECT * FROM states WHERE name = '{}' ORDER BY ID ASC".format(argv[4])
+    cursor.execute(quary)
 
     table = cursor.fetchall()
     for element in table:
