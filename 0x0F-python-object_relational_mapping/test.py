@@ -1,15 +1,15 @@
 #!/usr/bin/python3
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
-import re
-import sys
+Base = declarative_base()
 
-# Get the command-line argument
-arg = sys.argv[1]
+class MyTable(Base):
+    __tablename__ = 'my_table'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(255))
+    age = Column(Integer)
 
-# Match the pattern against the argument
-match = re.match(r"[A-Za-z\s]+", arg)
-
-if match:
-    print("Pattern matched!")
-else:
-    print("Pattern not matched.")
+m = MyTable()
