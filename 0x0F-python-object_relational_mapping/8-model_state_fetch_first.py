@@ -12,13 +12,10 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    table = session.query(State)
+    table = session.query(State).first()
 
-    for element in table:
-        if (element):
-            print(f"{element.id}: {element.name}")
-        else:
-            print("Nothing")
-        break
-
+    if (table):
+        print(f"{table.id}: {table.name}")
+    else:
+        print("Nothing")
     session.close()
