@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    table = session.query(State).order_by(State.id)
+    table = session.query(State)
 
     for element in table:
         if (element):
