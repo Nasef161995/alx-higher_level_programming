@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""mysqldb module"""
+
 import MySQLdb
 from sys import argv
 if __name__ == "__main__":
@@ -10,7 +12,17 @@ if __name__ == "__main__":
        port = 3306
     )
     cursor = db_connection.cursor()
-    quary = "SELECT * FROM cities ORDER BY ID ASC"
+    quary = """ SELECT
+                    cities.id,
+                    cities.name,
+                    states.name
+                    FROM
+                    cities
+                    JOIN
+                    states
+                    ON
+                    cities.state_id = states.id
+                    ORDER BY id ASC"""
     cursor.execute(quary)
     
     table = cursor.fetchall()
