@@ -25,7 +25,12 @@ if __name__ == "__main__":
                 ORDER BY cities.id ASC""".format(argv[4])
     cursor.execute(quary)
     table = cursor.fetchall()
-    for element in table:
-        print(element)
+    if table:
+        for row in table[:-1]:
+            for i in row:
+                print(i, end=", ")
+        print(table[-1][0])
+    else:
+        print()
     cursor.close()
     db_connection.close()
