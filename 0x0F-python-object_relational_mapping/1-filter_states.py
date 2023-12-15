@@ -12,7 +12,7 @@ if __name__ == "__main__":
         port=3306
     )
     cursor = db_connection.cursor()
-    quary = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY ID ASC"
+    quary = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY ID ASC"
     cursor.execute(quary)
 
     table = cursor.fetchall()
