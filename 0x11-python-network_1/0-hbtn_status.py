@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python script that fetches the webpage"""
+"""Python script that fetches webpage"""
 
 if __name__ == "__main__":
     import urllib.request
