@@ -6,8 +6,8 @@ if __name__ == "__main__":
     import sys
     from urllib.error import HTTPError
     url = sys.argv[1]
-    try:
-        response = requests.get(url)
+    response = requests.get(url)
+    if response.status_code >= 400:
+        print("Error code:", response.status_code)
+    else:
         print(response.text)
-    except HTTPError as error:
-        print("Error code:", error.code)
