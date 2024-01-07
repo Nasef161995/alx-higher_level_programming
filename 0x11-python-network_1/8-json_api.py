@@ -11,10 +11,10 @@ if __name__ == "__main__":
         q = ""
     response = requests.post(url, data={'q': q})
     try:
-        jason = response.jason()
-        if jason:
-            id = jason.get('id')
-            name = jason.get('name')
+        res = response.json()
+        if res:
+            id = res.get('id')
+            name = res.get('name')
             print("[{}] {}".format(id, name))
         else:
             print("No result")
