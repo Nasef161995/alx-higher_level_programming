@@ -9,8 +9,7 @@ if __name__ == "__main__":
         q = sys.argv[1]
     else:
         q = ""
-    a = {"q": q}
-    response = requests.post(url, data=a)
+    response = requests.post(url, data={'q': q})
     try:
         jason = response.jason()
         if jason:
