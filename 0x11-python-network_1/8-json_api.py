@@ -5,12 +5,12 @@ if __name__ == "__main__":
     import requests
     import sys
     url = 'http://0.0.0.0:5000/search_user'
-    if (len(sys.argv)) > 1:
+    if len(sys.argv) > 1:
         q = sys.argv[1]
     else:
         q = ""
-    data = {"q": q}
-    response = requests.post(url, data)
+    a = {"q": q}
+    response = requests.post(url, data=a)
     try:
         jason = response.jason()
         if jason:
